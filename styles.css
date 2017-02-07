@@ -1,0 +1,80 @@
+body {
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: comic;
+  src: local('Baskerville-Italic'),
+  local('GoudyOldStyleT-Italic'),
+  local('Palatino-Italic'),
+  local('BookAntiqua-Italic');
+  unicode-range: U+26;
+}
+
+
+ol {
+  list-style: none;
+  background: rgba(240,240,240, 0.5);
+  width: 100%;
+  padding: 0;
+  margin-right: 0.4em;
+}
+
+ol li {
+  background: rgba(240,240,240, 0.9);
+  max-width: 16em;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0em;
+  padding: 0.4em 1em;
+  width: max-content;
+  border-radius: 1em;
+}
+
+ol li p {
+  flex: 0 0 100%;
+}
+
+ol li footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 1em;
+}
+
+ol li footer p {
+  color: grey;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7em;
+}
+
+ol li footer p[data-status="READ"] {
+  color: green;
+}
+
+ol li footer p[data-status="DELIVERED"] {
+  display: block;
+  color: blue;
+}
+
+form {
+  padding-left: 0.2em;
+}
+
+form label, textarea {
+  display: block;
+}
+
+.login {
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: blue;
+  box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
+}
+
+a:target + .login {
+  display: block;
+}
