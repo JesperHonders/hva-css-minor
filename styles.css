@@ -1,29 +1,34 @@
 body {
-  font-family: sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  /*background-color: #ECF0F1;*/
 }
 
 h1 {
-  font-family: comic;
+  font-size: 61px;
+  color: #34495E;
+  /*font-family: "Ampersand";*/
 }
 
 @font-face {
-  font-family: comic;
-  unicode-range: "U+0026"; /* only make font available for Ampersand */
-  src: local('Baskerville-Italic');
+    font-family: 'Ampersand';
+    src: local('Baskerville'), local('Palatino'), local('Book Antiqua');
+    unicode-range: U+26;
 }
 
 
 ol {
   list-style: none;
-  background: rgba(240,240,240, 0.5);
+  background: #2C3E50;
   width: 100%;
-  padding: 0;
+  padding: 0.2em;
   margin-right: 0.4em;
   max-width: 20em;
+  border-radius: 1em;
+  overflow-y: scroll;
 }
 
 ol li {
-  background: rgba(240,240,240, 0.9);
+  background: #16A085;
   max-width: 16em;
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +41,7 @@ ol li {
 ol li p {
   flex: 0 0 100%;
   margin: 0.2em 0 0 0;
+  color: white;
 }
 
 ol li footer {
@@ -47,10 +53,11 @@ ol li footer {
 }
 
 ol li footer p {
-  color: grey;
+  color: #34495E;
   margin: 0;
   text-align: right;
   font-size: 0.7em;
+  display: block;
 }
 
 ol li footer p[data-status="READ"] {
@@ -58,7 +65,6 @@ ol li footer p[data-status="READ"] {
 }
 
 ol li footer p[data-status="DELIVERED"] {
-  display: block;
   color: blue;
 }
 
@@ -66,19 +72,63 @@ form {
   padding-left: 0.2em;
 }
 
-form label, textarea {
+
+form textarea, input {
+  border: 2px solid #bdc3c7;
+  color: #34495e;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+form input[id="field-stay-logged-in"], label[for="field-stay-logged-in"] {
+  display: inline-block;
+}
+
+form button[type="submit"]{
+  margin-top: 1em;
+  color: #ffffff;
+  background-color: #1abc9c;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  border: none;
+  border-radius: 6px;
+}
+
+form a {
   display: block;
 }
 
+#close{
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  background: white;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+form label, textarea, button, input {
+  display: block;
+}
+
+
+
 .login {
+  border-radius: 1em;
   display: none;
   position: fixed;
   left: 50%;
+  padding: 1.5em 1.5em 1.25em;
   transform: translate(-50%, 0); /* Translate to middle */
-  background: blue;
+  background: #edeff1;
   box-shadow: 0 0 0 50vmax rgba(0,0,0,.8); /* De-emphasize trick */
 }
 
-a[href="#login"]:target + .login {
+#login:target ~ .login {
   display: block;
 }
