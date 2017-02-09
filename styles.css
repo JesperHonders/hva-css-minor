@@ -15,6 +15,37 @@ h1 {
     unicode-range: U+26;
 }
 
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  background: #2f4154;
+  padding: 1em 1em;
+  border-radius: 1em;
+  list-style: none;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul > li {
+  margin: 0em 1em;
+}
+
+nav ul li:nth-child(2) a:hover{
+  display: flex;
+  background: red
+}
+
+nav ul li ul {
+  /*display: none;*/
+  margin-top: 1em;
+  list-style: disc;
+  flex-direction: column;
+  padding: 0;
+}
+
 
 ol {
   list-style: none;
@@ -123,8 +154,9 @@ form label, textarea, button, input {
   display: none;
   position: fixed;
   left: 50%;
+  top: 50%;
   padding: 1.5em 1.5em 1.25em;
-  transform: translate(-50%, 0); /* Translate to middle */
+  transform: translate(-50%, -50%); /* Translate to middle */
   background: #edeff1;
   box-shadow: 0 0 0 50vmax rgba(0,0,0,.8); /* De-emphasize trick */
 }
