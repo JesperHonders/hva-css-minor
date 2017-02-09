@@ -1,6 +1,6 @@
 @font-face {
     font-family: Ampersand;
-    src: local('Baskerville'),
+    src: local('Delicious'),
          local('Goudy Old Style'),
          local('Palatino'),
          local('Book Antiqua');
@@ -39,10 +39,76 @@ main {
   transition: .6s filter;
 }
 
-h1 {
-  font-size: 61px;
+h1,h2,h3,h4,h5{
   color: #34495E;
+}
+
+h1 {
+  font-size: 3.813em;
   font-family: "Ampersand", "Lato", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 3.313em;
+}
+
+h3 {
+  font-size: 2.500em;
+}
+
+h4 {
+  font-size: 1.813em;
+}
+
+h5 {
+  font-size: 1.750em;
+}
+
+#colors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#colors div {
+  padding: 1em 2em;
+  margin: 0 0 1em 0;
+}
+
+#colors div:nth-child(1) {
+  background: #edeff1;
+}
+
+#colors div:nth-child(2) {
+  background: #bdc3c7;
+}
+
+#colors div:nth-child(3) {
+  background: #34495e;
+}
+
+#colors div:nth-child(4) {
+  background: #2f4154;
+}
+
+#colors div:nth-child(5) {
+  background: #2ecc71;
+}
+
+#colors div:nth-child(6) {
+  background: #1abc9c;
+}
+
+#colors div:nth-child(7) {
+  background: #16a085;
+}
+
+#colors div:nth-child(8) {
+  background: #E67E22;
+}
+
+#colors div:nth-child(9) {
+  background: #D35400;
 }
 
 nav ul {
@@ -111,6 +177,7 @@ nav ul li ul {
 
 
 #chat {
+  height: 15em;
   list-style: none;
   background: #2C3E50;
   width: 100%;
@@ -165,7 +232,7 @@ nav ul li ul {
 }
 
 #chat li footer p[data-status="READ"] {
-  color: green;
+  color: #2ECC71;
 }
 
 #chat li footer p[data-status="DELIVERED"] {
@@ -213,6 +280,10 @@ form a {
 
 form label, textarea, button, input {
   display: block;
+}
+
+fieldset label svg {
+  width: 1em;
 }
 
 
