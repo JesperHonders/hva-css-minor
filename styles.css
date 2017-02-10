@@ -16,6 +16,12 @@ img {
   max-width: 100%;
 }
 
+@media screen and(min-width: 28.125em){
+  h1 {
+
+  }
+}
+
 article#paper{
   display: none;
   position: fixed;
@@ -24,6 +30,10 @@ article#paper{
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 1em 3em;
+}
+
+#paper h1{
+  font-size: 1.813em;
 }
 
 #paper:target{
