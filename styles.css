@@ -4,7 +4,7 @@
          local('Goudy Old Style'),
          local('Palatino'),
          local('Book Antiqua');
-    unicode-range: 0026;
+    unicode-range: U+0026;
 }
 
 body {
@@ -16,19 +16,14 @@ img {
   max-width: 100%;
 }
 
-@media screen and(min-width: 28.125em){
-  h1 {
-
-  }
-}
-
 article#paper{
   display: none;
   position: fixed;
   background: #edeff1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 1em 3em;
 }
 
@@ -42,10 +37,12 @@ article#paper{
 }
 
 #paper:target ~ main{
-  filter: blur(3px) contrast(.8) brightness(.8);
+  -webkit-filter: blur(3px) contrast(.8) brightness(.8);
+          filter: blur(3px) contrast(.8) brightness(.8);
 }
 
 main {
+  -webkit-transition: .6s filter;
   transition: .6s filter;
 }
 
@@ -75,9 +72,14 @@ h5 {
 }
 
 #colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #colors div {
@@ -150,7 +152,10 @@ nav ul > li {
 nav ul li svg {
   width: 1em;
   height: 1em;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 nav ul li input {
@@ -169,7 +174,8 @@ nav ul li input:checked ~ ul{
 }
 
 nav ul li input:checked + a svg{
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 nav ul li ul {
