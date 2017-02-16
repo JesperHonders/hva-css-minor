@@ -9,7 +9,6 @@
 
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  /*background-color: #ECF0F1;*/
 }
 
 img {
@@ -170,15 +169,25 @@ nav ul li svg {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  position: absolute;
+  right: -1.3em;
+  top: 0.2em;
 }
 
-nav ul li input {
+nav input {
   width: 100%;
   height: 100%;
   position: absolute;
   top: -1px;
   opacity: 0;
   z-index: 1;
+}
+
+nav input:before {
+  content: '';
+  position: absolute;
+  top: -10px; right: -10px;
+  bottom: -10px; left: -10px;
 }
 
 nav input:checked ~ ul{
@@ -282,7 +291,7 @@ form textarea, input {
   box-shadow: none;
 }
 
-form input[id="field-stay-logged-in"], label[for="field-stay-logged-in"] {
+input[id="field-stay-logged-in"], label[for="field-stay-logged-in"] {
   display: inline-block;
 }
 
@@ -316,9 +325,11 @@ form label, textarea, button, input {
   display: block;
 }
 
-fieldset label svg {
+fieldset svg {
   width: 1em;
 }
+
+
 
 
 .login {
@@ -332,10 +343,24 @@ fieldset label svg {
           transform: translate(-50%, -50%); /* Translate to middle */
   background: #edeff1;
   box-shadow: 0 0 0 150vw rgba(0,0,0,.8); /* De-emphasize trick */
+  width: 30vw;
+  flex-direction: column;
+}
+
+.login:valid {
+  background: rgba(220,255,220,1)
+}
+
+.login input{
+  background: rgba(0,255,0,0.1);
+}
+
+.login input:invalid {
+  background: rgba(255,0,0,0.1);
 }
 
 #login:target ~ .login {
-  display: block;
+  display: flex;
 }
 
 @keyframes loader {
@@ -349,4 +374,16 @@ fieldset label svg {
   text-indent: 200%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.random-cursor {
+  cursor: help;
+}
+#secret:target{
+  background: hsl(20, 40%, 90%);
+  background-image:
+   linear-gradient(90deg, #fb3 11px, transparent 0),
+   linear-gradient(90deg, #ab4 23px, transparent 0),
+   linear-gradient(90deg, #655 41px, transparent 0);
+  background-size: 41px 100%, 61px 100%, 83px 100%;
 }
