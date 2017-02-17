@@ -144,7 +144,7 @@ nav ul {
   position: relative
 }
 
-nav a {
+nav ul a {
   color: white;
   text-decoration: none;
   transition: color 0.5s;
@@ -174,6 +174,7 @@ nav ul li svg {
   top: 0.2em;
 }
 
+
 nav input {
   width: 100%;
   height: 100%;
@@ -183,10 +184,11 @@ nav input {
   z-index: 1;
 }
 
+
 nav input:before {
   content: '';
   position: absolute;
-  top: -10px; right: -10px;
+  top: -10px; right: -20px;
   bottom: -10px; left: -10px;
 }
 
@@ -329,9 +331,6 @@ fieldset svg {
   width: 1em;
 }
 
-
-
-
 .login {
   border-radius: 1em;
   display: none;
@@ -343,12 +342,12 @@ fieldset svg {
           transform: translate(-50%, -50%); /* Translate to middle */
   background: #edeff1;
   box-shadow: 0 0 0 150vw rgba(0,0,0,.8); /* De-emphasize trick */
-  width: 30vw;
+  min-width: 30vw;
   flex-direction: column;
 }
 
 .login:valid {
-  background: rgba(220,255,220,1)
+  background: rgba(220,255,220,1);
 }
 
 .login input{
@@ -359,9 +358,39 @@ fieldset svg {
   background: rgba(255,0,0,0.1);
 }
 
+.login input[type="checkbox"]{
+  display: none;
+}
+
+.login label {
+
+}
+/* Incomming shamefull copy of the book, this is going to be changed later on */
+.login input[type="checkbox"] + label::before {
+  content: '\a0';
+  margin-top: 1em;
+  display: inline-block;
+  vertical-align: .2em;
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+  border-radius: .2em;
+  background: silver;
+  text-indent: .15em;
+  line-height: 0.6em;
+  font-size: 1em;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: '\2713';
+}
+
 #login:target ~ .login {
   display: flex;
 }
+
+a img input  {}
+
 
 @keyframes loader {
   to { background-position: -800px 0; }
@@ -386,4 +415,64 @@ fieldset svg {
    linear-gradient(90deg, #ab4 23px, transparent 0),
    linear-gradient(90deg, #655 41px, transparent 0);
   background-size: 41px 100%, 61px 100%, 83px 100%;
+}
+
+fieldset input{
+  display: none;
+}
+
+fieldset label {
+  margin-right: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+fieldset input:checked + label {
+  background: pink;
+}
+
+article h1 a {
+    font-size: 65%;
+}
+
+article p {
+  max-width: 25em;
+}
+
+progress {
+  width: 100%;
+  background: #1abc9c;
+}
+
+nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  background: #2f4154;
+  border-width: 2px;
+  border-radius: 6px;
+  list-style: none;
+}
+
+nav ol li {
+  margin-right: 7em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: grey;
+}
+
+nav ol li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+ol li[data-status="active"]{
+  background: #34495e;
+  color: #2ecc71;
+}
+
+ol li[data-status="active"] a{
+  color: #2ecc71;
 }
