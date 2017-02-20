@@ -1,6 +1,6 @@
 # See this styleguide live
 
-Live version is available @ https://jesperhonders.github.io/hva-css-minor/week1/styleguide.html
+Live version is available @ https://jesperhonders.github.io/hva-css-minor/week2/styleguide.html
 
 # Components
 
