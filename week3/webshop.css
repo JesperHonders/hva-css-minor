@@ -262,11 +262,11 @@ section article h1 {
 }
 
 #chat-container {
-  0 0 2em 0.2em black;
+  box-shadow: 0 0 2em 0.2em black;
   display: block;
   position: fixed;
   bottom: 0;
-  right: 0.4em;
+  right: 0;
   background: #edeff1;
   border-radius: 0.5em;
   padding-left: 0.5em;
@@ -415,13 +415,6 @@ form textarea:hover, form textarea:focus{
   background: #E0EAE5;
 }
 
-fieldset {
-  max-width: max-content;
-}
-
-fieldset svg {
-  width: 1em;
-}
 
 #login {
   border-radius: 1em;
@@ -510,14 +503,24 @@ input[type="checkbox"]:checked + label::before {
   background-size: 41px 100%, 61px 100%, 83px 100%;
 }
 
+fieldset {
+  max-width: 17em;
+  max-width: 20em;
+  padding: 0 0 0.3em 0;
+}
+
+fieldset svg {
+  width: 1em;
+}
+
 fieldset input{
   display: none;
 }
 
 fieldset label {
   margin-right: 1em;
-  padding: 0.2em 0.5em;
-  border-radius: 1em;
+  padding: 0 0 0.2em 0;
+  text-indent: -1000em;
 }
 
 fieldset input:checked + label {
@@ -533,7 +536,6 @@ article p {
 }
 
 progress {
-
   background: #1abc9c;
 }
 
@@ -546,6 +548,10 @@ nav > a {
 }
 
 nav > a:focus path {
+  fill: #1abc9c;
+}
+
+nav > a:hover path {
   fill: #1abc9c;
 }
 
@@ -563,6 +569,7 @@ nav ol {
   margin-bottom: -0.2em;
   justify-content: center;
   border-bottom: 1px solid grey;
+  list-style: none;
 }
 
 nav ol li {
@@ -594,6 +601,10 @@ ol li[data-status="active"]{
 ol li[data-status="active"] a{
   color: #2ecc71;
   font-weight: normal;
+}
+
+ol li[data-status="done"]:before {
+  content: '✔';
 }
 
 #paper h1{
