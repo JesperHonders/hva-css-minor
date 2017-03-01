@@ -431,15 +431,13 @@ ol li[data-status="done"]:before {
 /* Info popUp */
 
 #info{
-  display: none;
-  position: fixed;
-  background: #edeff1;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  padding: 1em 3em;
+  padding: 0em 1em;
   max-height:90vh;
+}
+
+#info figure {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #info h1{
@@ -447,7 +445,7 @@ ol li[data-status="done"]:before {
 }
 
 #info img{
-  max-height: 80%;
+  max-height: 100vh;
   display: block;
   margin: 0 auto;
 }
