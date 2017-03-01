@@ -110,6 +110,7 @@ nav ul {
 nav ul a {
   color: white;
   text-decoration: none;
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
@@ -187,9 +188,14 @@ nav ul li ul {
 
 section {
   margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section article {
@@ -270,7 +276,8 @@ section article h1 {
   background: #edeff1;
   border-radius: 0.5em;
   padding-left: 0.5em;
-  transform: translateY(110%);
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
 }
 
 #chat-container h1{
@@ -291,8 +298,12 @@ section article h1 {
 }
 
 #chat-enable:target + #chat-container {
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
-  transform: translateY(0%);
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 #chat li {
@@ -377,6 +388,7 @@ form button[type="submit"]{
   line-height: 1.471;
   border: 1px solid white;
   border-radius: 6px;
+  -webkit-transition: color 0.5s, background-color 0.5s, border 0.5s;
   transition: color 0.5s, background-color 0.5s, border 0.5s;
 }
 
@@ -430,7 +442,10 @@ form textarea:hover, form textarea:focus{
   min-width: 15em;
   max-width: 25em;
   width: 80%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 1;
 }
 
@@ -475,7 +490,13 @@ input[type="checkbox"]:checked + label::before {
 }
 
 #login:target ~ .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
+
+@-webkit-keyframes loader {
+  to { background-position: -800px 0; }
 }
 
 @keyframes loader {
@@ -484,7 +505,8 @@ input[type="checkbox"]:checked + label::before {
 .loader {
   width: 100px; height: 100px;
   background: url(images/loader.png) 0 0;
-  animation: loader 1s infinite steps(8);
+  -webkit-animation: loader 1s infinite steps(8);
+          animation: loader 1s infinite steps(8);
   /* Hide text */
   text-indent: 200%;
   white-space: nowrap;
@@ -496,6 +518,10 @@ input[type="checkbox"]:checked + label::before {
 }
 #secret:target{
   background: hsl(20, 40%, 90%);
+  background-image:
+   -webkit-linear-gradient(left, #fb3 11px, transparent 0),
+   -webkit-linear-gradient(left, #ab4 23px, transparent 0),
+   -webkit-linear-gradient(left, #655 41px, transparent 0);
   background-image:
    linear-gradient(90deg, #fb3 11px, transparent 0),
    linear-gradient(90deg, #ab4 23px, transparent 0),
@@ -561,13 +587,18 @@ nav > a svg {
 }
 
 nav ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   padding: 0;
   width: 100%;
   margin-bottom: -0.2em;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid grey;
   list-style: none;
 }
