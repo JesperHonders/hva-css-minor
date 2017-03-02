@@ -440,12 +440,16 @@ ol li[data-status="done"]:before {
   flex-wrap: wrap;
 }
 
+#info figure figcaption {
+  margin: 0 auto;
+}
+
 #info h1{
   font-size: 1.813em;
 }
 
 #info img{
-  max-height: 50vh;
+  max-height: 100vh;
   display: block;
   margin: 0 auto;
 }
