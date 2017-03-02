@@ -293,6 +293,7 @@ fieldset {
   max-width: 17em;
   max-width: 20em;
   padding: 0 0 0.3em 0;
+  border: none;
 }
 
 fieldset svg {
@@ -440,6 +441,14 @@ ol li[data-status="done"]:before {
   bottom: 0.5em;
   right: 0.5em;
   box-shadow: 0 0 0 2px white;
+}
+
+.chat-toggle:focus {
+  border: 2px solid #2f4154;
+}
+
+.chat-toggle svg:focus {
+  border: 2px solid #2f4154;
 }
 
 .chat-toggle svg {
