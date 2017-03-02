@@ -428,105 +428,6 @@ ol li[data-status="done"]:before {
   fill: #1abc9c;
 }
 
-/* Info popUp */
-
-#info{
-  padding: 0em 1em;
-  max-height:90vh;
-}
-
-#info figure {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#info figure figcaption {
-  margin: 0 auto;
-}
-
-#info h1{
-  font-size: 1.813em;
-}
-
-#info img{
-  max-height: 100vh;
-  display: block;
-  margin: 0 auto;
-}
-
-#info:target{
-  display:block;
-  z-index: 3;
-}
-
-#info:target ~ main{
-  -webkit-filter: blur(3px) contrast(.8) brightness(.8);
-          filter: blur(3px) contrast(.8) brightness(.8);
-}
-
-/* On #secret target makes background body psuedo random Uglu */
-
-#secret:target{
-  background: hsl(20, 40%, 90%);
-  background-image:
-   linear-gradient(90deg, #fb3 11px, transparent 0),
-   linear-gradient(90deg, #ab4 23px, transparent 0),
-   linear-gradient(90deg, #655 41px, transparent 0);
-  background-size: 41px 100%, 61px 100%, 83px 100%;
-}
-
-/* No longer needed in webshop demo */
-
-/*#colors {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}*/
-
-/* LOGIN SECTION */
-
-#login {
-  border-radius: 1em;
-  display: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  padding: 1.5em 1.5em 1.25em;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* Translate to middle */
-  background: #edeff1;
-  box-shadow: 0 0 0 150vw rgba(0,0,0,.8); /* De-emphasize trick */
-  min-width: 15em;
-  max-width: 25em;
-  width: 80%;
-  flex-direction: column;
-  z-index: 1;
-}
-
-#login:valid {
-  background: rgba(220,255,220,1);
-}
-
-#login input{
-  background: rgba(0,255,0,0.1);
-}
-
-#login input:invalid {
-  background: rgba(255,0,0,0.1);
-}
-
-#login input[type="checkbox"]{
-  display: none;
-}
-
-#login:target ~ .login {
-  display: flex;
-}
 
 /* Chat madness this breaks on old browsers */
 
@@ -638,4 +539,104 @@ ol li[data-status="done"]:before {
 
 #chat li footer p[data-status="DELIVERED"] {
   color: blue;
+}
+
+/* Info popUp */
+
+#info{
+  padding: 0em 1em;
+  max-height:90vh;
+}
+
+#info figure {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#info figure figcaption {
+  margin: 0 auto;
+}
+
+#info h1{
+  font-size: 1.813em;
+}
+
+#info img{
+  max-height: 100vh;
+  display: block;
+  margin: 0 auto;
+}
+
+#info:target{
+  display:block;
+  z-index: 3;
+}
+
+#info:target ~ main{
+  -webkit-filter: blur(3px) contrast(.8) brightness(.8);
+          filter: blur(3px) contrast(.8) brightness(.8);
+}
+
+/* On #secret target makes background body psuedo random Uglu */
+
+#secret:target{
+  background: hsl(20, 40%, 90%);
+  background-image:
+   linear-gradient(90deg, #fb3 11px, transparent 0),
+   linear-gradient(90deg, #ab4 23px, transparent 0),
+   linear-gradient(90deg, #655 41px, transparent 0);
+  background-size: 41px 100%, 61px 100%, 83px 100%;
+}
+
+/* No longer needed in webshop demo */
+
+/*#colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}*/
+
+/* LOGIN SECTION */
+
+#login {
+  border-radius: 1em;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 1.5em 1.5em 1.25em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); /* Translate to middle */
+  background: #edeff1;
+  box-shadow: 0 0 0 150vw rgba(0,0,0,.8); /* De-emphasize trick */
+  min-width: 15em;
+  max-width: 25em;
+  width: 80%;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#login:valid {
+  background: rgba(220,255,220,1);
+}
+
+#login input{
+  background: rgba(0,255,0,0.1);
+}
+
+#login input:invalid {
+  background: rgba(255,0,0,0.1);
+}
+
+#login input[type="checkbox"]{
+  display: none;
+}
+
+#login:target ~ .login {
+  display: flex;
 }
